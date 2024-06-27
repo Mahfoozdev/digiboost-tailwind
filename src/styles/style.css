@@ -5,3 +5,21 @@
   padding: 0;
   margin: 0;
 }
+html{
+  scroll-behavior: smooth !important;
+}
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+transition: 0.4s;
+z-index: 1000;
+
+}
+nav.sticky{
+  transition:ease-in 0.4s;
+  padding:5px 0px;
+}
+nav.sticky.main{
+  border-radius: 0;
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Digibs</title>
     <link rel="stylesheet" href="/src/styles/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +17,7 @@
     />
   </head>
   <body class="font-libre bg-[#05294a] text-white">
-    <section class="w-100 flex justify-center py-5">
+    <nav class="w-100 flex justify-center py-5">
       <main
         class="bg-[#0a3257] rounded-full xl:w-[85%] lg:w-[90%] w-[95%] flex justify-center xl:gap-[130px] xl:items-center py-2 items-center gap-[80px] lg:gap-[550px] md:gap-[350px]"
       >
@@ -27,15 +27,15 @@
         />
         <div class="hidden xl:block">
           <ul class="font-sans text-white flex gap-10 items-center">
-            <li class="hover:text-[#34b88e] cursor-pointer">Home</li>
-            <li class="hover:text-[#34b88e] cursor-pointer">About Us</li>
-            <li class="hover:text-[#34b88e] cursor-pointer">Services</li>
-            <li class="hover:text-[#34b88e] cursor-pointer">Projects</li>
-            <li class="hover:text-[#34b88e] cursor-pointer">Pages</li>
-            <li class="hover:text-[#34b88e] cursor-pointer">Contact Us</li>
+            <li class="hover:text-[#34b88e] cursor-pointer"><a href="#home">Home</a></li>
+            <li class="hover:text-[#34b88e] cursor-pointer"><a href="#about">About Us</a></li>
+            <li class="hover:text-[#34b88e] cursor-pointer"><a href="#services">Services</a></li>
+            <li class="hover:text-[#34b88e] cursor-pointer"><a href="#projects">Projects</a></li>
+            <li class="hover:text-[#34b88e] cursor-pointer"><a href="#pages">Pages</a></li>
+            <li class="hover:text-[#34b88e] cursor-pointer"><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
-        <div class="flex gap-5 items-center">
+        <div class="flex gap-5 items-center" id="home">
           <button class="bg-none border-none xl:hidden">
             <i class="bi bi-list text-[#34b88e] text-[27px]"></i>
           </button>
@@ -46,9 +46,9 @@
           </button>
         </div>
       </main>
-    </section>
+    </nav>
     <!-- banner section starts -->
-    <section class="w-full flex justify-center md:py-[90px] py-10">
+    <section class="w-full flex justify-center  pt-48 pb-28">
       <main
         class="w-[95%] md:w-[95%] lg:w-[85%] xl:w-[65%] flex flex-col  gap-7 text-white items-center px-3 md:px-0"
       >
@@ -229,7 +229,7 @@
     <main class="w-[89%] md:w-[95%] lg:w-[90%] xl:w-[85%]"><img src="./img/png/2nd-img.jpg" alt="" class="h-full w-full object-cover rounded-xl"></main>
   </section>
   <!-- offer section starts -->
-  <section class="flex justify-center py-[50px]">
+  <section class="flex justify-center py-[50px]" id="services">
     <main class="w-[89%] md:w-[95%] lg:w-[90%] xl:w-[85%] flex justify-center flex-col gap-10 px-3 md:px-0">
 <h1 class="md:text-[35px] text-[27px] text-center">We offer a wide range of design services</h1>
 <div class="grid grid-cols-1 md:grid-rows-4 md:gap-5">
@@ -307,7 +307,7 @@
     </section>
     <!-- next section starts -->
 
-    <section class="flex justify-center py-[50px]">
+    <section class="flex justify-center py-[50px]" id="projects">
       <main class="w-[89%] md:w-[95%] lg:w-[90%] xl:w-[85%] flex justify-center flex-col gap-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5 hover:border-[#33ad89] border-[#0a3257] border-[1px] rounded-xl md:rounded-br-[100px]">
@@ -343,7 +343,7 @@
 </section>
   <!-- meet our team section starts -->
   
-  <section class="flex justify-center py-[50px]">
+  <section class="flex justify-center py-[50px]" id="about">
     <main class="w-[89%] md:w-[95%] lg:w-[90%] xl:w-[85%] flex justify-center flex-col items-center gap-3">
       <span class="text-[#76cfb1] font-sans">Meet Our Team</span>
       <h1 class="md:text-[35px] text-[30px] text-center">The Driving Force Behind Digiboost</h1>
@@ -520,7 +520,7 @@
 </section>
 <!-- news and articles section starts -->
 
-<section class="flex justify-center pb-[50px]">
+<section class="flex justify-center pb-[50px]" id="pages">
   <main class="w-[89%] md:w-[95%] lg:w-[90%] xl:w-[85%] flex justify-center flex-col items-center gap-10">
   <div class="flex flex-col md:flex-row gap-5 md:justify-between w-full items-center">
     <div>
@@ -667,7 +667,7 @@
 </main>
 </section>
 
-<section class="flex justify-center py-5">
+<section class="flex justify-center py-5" id="contact">
   <main class="w-[89%] md:w-[95%] lg:w-[90%] xl:w-[85%] flex justify-center flex-col items-center gap-3">
     <div class="w-full flex md:justify-between md:flex-row flex-col gap-5">
       <p class="text-center">Copyright © 2024 digiboost. All rights reserved.</p>
@@ -678,4 +678,10 @@
     </section>
 
   </body>
+  <script>
+    window.addEventListener("scroll",(x)=>{
+    var nav = document.querySelector("nav");
+    nav.classList.toggle("sticky", window.scrollY >0);
+})
+  </script>
 </html>
