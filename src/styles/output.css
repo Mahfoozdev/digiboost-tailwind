@@ -554,8 +554,24 @@ video {
   --tw-contain-style:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .sticky {
   position: sticky;
+}
+
+.right-\[100\%\] {
+  right: 100%;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.z-\[99999999\] {
+  z-index: 99999999;
 }
 
 .col-span-2 {
@@ -614,6 +630,14 @@ video {
   height: 100%;
 }
 
+.h-\[93vh\] {
+  height: 93vh;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
 .w-28 {
   width: 7rem;
 }
@@ -658,6 +682,14 @@ video {
   width: 100%;
 }
 
+.w-\[10\%\] {
+  width: 10%;
+}
+
+.w-\[90\%\] {
+  width: 90%;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -678,12 +710,24 @@ video {
   flex-direction: column;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-0 {
@@ -816,6 +860,16 @@ video {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-\[\#e6eaee\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 234 238 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#329a89\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(50 154 137 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-tr {
@@ -1029,8 +1083,20 @@ video {
   line-height: 1.25rem;
 }
 
+.text-\[19px\] {
+  font-size: 19px;
+}
+
+.text-\[28px\] {
+  font-size: 28px;
+}
+
 .font-light {
   font-weight: 300;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .text-\[\#33ad89\] {
@@ -1068,6 +1134,15 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-\[\#000000a2\] {
+  color: #000000a2;
+}
+
+.text-\[whitesmoke\] {
+  --tw-text-opacity: 1;
+  color: rgb(245 245 245 / var(--tw-text-opacity));
+}
+
 .outline-0 {
   outline-width: 0px;
 }
@@ -1080,6 +1155,10 @@ video {
 
 .duration-1000 {
   transition-duration: 1000ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 * {
@@ -1214,6 +1293,10 @@ nav.sticky.main{
 
   .md\:w-\[95\%\] {
     width: 95%;
+  }
+
+  .md\:w-\[5\%\] {
+    width: 5%;
   }
 
   .md\:grid-cols-2 {

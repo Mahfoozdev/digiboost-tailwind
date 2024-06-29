@@ -35,8 +35,8 @@
             <li class="hover:text-[#34b88e] cursor-pointer"><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
-        <div class="flex gap-5 items-center" id="home">
-          <button class="bg-none border-none xl:hidden">
+        <div class="flex gap-5 items-center">
+          <button class="bg-none border-none xl:hidden"  onclick="Open()">
             <i class="bi bi-list text-[#34b88e] text-[27px]"></i>
           </button>
           <button
@@ -46,9 +46,24 @@
           </button>
         </div>
       </main>
+      <aside class="bg-[#05294a]  w-full h-screen z-[99999999] fixed top-0 right-[100%] duration-500 transition-all" id="sidebar">
+        
+         <div class="flex justify-end  p-5"><button class="" onclick="Close()"><i class="bi bi-x-lg text-[whitesmoke] font-bold text-[28px]"></i></button></div>
+         <ul class="text-[whitesmoke] flex flex-col gap-5 text-[19px] p-5 justify-center items-center">
+            
+             <li class="text-center" id="list"><a href="#home" onclick="Close()">Home</a></li>
+             <li class="text-center" id="list"><a href="#about" onclick="Close()">About</a></li>
+             <li class="text-center" id="list"><a href="#services" onclick="Close()">Services</a></li>
+             <li class="text-center" id="list"><a href="#pages" onclick="Close()">Pages</a></li>
+             <li class="text-center" id="list"><a href="#projects" onclick="Close()">Projects</a></li>
+             <li class="text-center" id="list"><a href="#contact" onclick="Close()">Contacts</a></li>
+         </ul>
+      
+     </aside>
+
     </nav>
     <!-- banner section starts -->
-    <section class="w-full flex justify-center  pt-48 pb-28">
+    <section class="w-full flex justify-center  pt-48 pb-28" id="home">
       <main
         class="w-[95%] md:w-[95%] lg:w-[85%] xl:w-[65%] flex flex-col  gap-7 text-white items-center px-3 md:px-0"
       >
@@ -683,5 +698,16 @@
     var nav = document.querySelector("nav");
     nav.classList.toggle("sticky", window.scrollY >0);
 })
+
+function Open() {
+document.getElementById("sidebar").style.right = "0"
+
+}
+function Close() {
+document.getElementById("sidebar").style.right = "100%"
+
+
+
+}
   </script>
 </html>
